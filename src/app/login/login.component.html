@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h2>
+  Login
+</h2> 
+  <div class="login-page">
+   <div class="form">
+ 
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata)" method="POST" class="login-form" >
+    <input #username type="text" name="username" placeholder="username" formControlName="username"/>
+    <br>
+    <input #password type="password" id="password-field" name="password" placeholder="password" formControlName="password">
+    <i id="pass-status" class="fa fa-eye fa-xs" (click)="viewPassword()"></i>
+    <br>
+    <input type="submit" value="Login" [disabled]="!formdata.valid" class="button"/>
+  </form>
+  <br>
+ 
+  <div [hidden]="unotvalid" class="text-danger"> Username is Not Valid </div>
+  <br>
+  <div [hidden]="pnotvalid" class="text-danger"> Password not valid </div>
+  <input type="submit" value="Register"  class="button" (click)="Register()"/>  
+</div>
+  <br>
+  
+</div>
+  
+
+

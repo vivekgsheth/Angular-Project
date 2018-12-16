@@ -1,0 +1,43 @@
+<div class="login-page">
+    <div class="form">
+    <h1>Sign Up</h1>
+    
+    <hr>
+    <form #userForm="ngForm" (ngSubmit)="onClickSubmit(userForm)" class="login-form">
+        <div >
+          <input type="text" placeholder="username" #name="ngModel" required class="form-control" [class.is-invalid]="name.invalid && name.touched" name="username" ngModel>
+          <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small>
+          <br>
+        <div >
+          <input type="email" required class="form-control" #email="ngModel" name="emailid" placeholder="email" ngModel>
+          <small class="text-danger"  [class.d-none]="email.valid || email.untouched">Email is not Valid</small>        </div>
+        
+        <br>  
+        <div >
+          <input type="password" required class="form-control" #pass1="ngModel" name="password1" placeholder="enter password" ngModel>
+          <small class="text-danger" [class.d-none]="pass1.valid || pass1.untouched">Enter Password</small>
+        </div>
+        <br>
+        <div >
+            <input type="password" required class="form-control" #pass2="ngModel" name="password2" placeholder="reenter password" ngModel>
+            <small class="text-danger" [class.d-none]="pass2.valid || pass2.untouched">Enter Password2</small>
+        </div>
+        <div >
+          <small class="text-danger" [class.d-none]="pass2.value==pass1.value">Password Dont Match</small>
+        </div>
+        <button class="btn btn-primary" [disabled]="userForm.invalid">Register</button>
+        &nbsp;
+        &nbsp;
+        </div>
+        
+    </form>
+    <br>
+  
+    <div>
+      <button class="btn btn-primary" (click)="Login()">Login </button>
+    </div>
+    <div class="text-danger" [hidden]="see">username already exits </div>
+    </div>
+    
+  </div>
+  

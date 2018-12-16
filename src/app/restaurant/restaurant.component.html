@@ -1,0 +1,205 @@
+<app-navbar></app-navbar>
+
+ 
+<div class="maincontainer1">
+<br>
+<br>
+<div class="sidebar1">
+    <div class="headsymbol1">
+    <div class="heading1">
+    Cuisines
+    </div>
+    <div class="symbol1" id="symbolcuisine">
+            &or;
+    </div>
+    </div>
+    <div class="ending1">
+    </div>
+    <div class="sidebarhead1" id="cuisine">   
+      <div class="detailcheck1">
+      <label class="text1"><input type="checkbox"> Italian</label> 
+      <br>
+     <label class="text1"><input type="checkbox"> Mexican</label>
+     <br>
+     <label class="text1"><input type="checkbox"> Punjabi</label>
+     <br>
+     </div>
+     </div>
+     <br>
+     <div class="headsymbol1">
+     <div class="heading1">
+    Locality
+    </div>
+    <div class="symbol1" id="symbolarea">
+        &or;
+     </div>
+    </div>
+    <div class="ending1">
+    </div>
+    <div class="sidebarhead1" id="area">   
+    <div class="detailcheck1">
+    <label class="text1"><input type="checkbox"> Alkapuri</label> 
+    <br>
+    <label class="text1"><input type="checkbox"> Gotri</label>
+    <br>
+    <label class="text1"><input type="checkbox"> Akota</label>
+    <br>
+    </div>
+    </div>
+    <br>
+    <div class="headsymbol1">
+        <div class="heading1">
+            Average Cost
+       </div>
+       <div class="symbol1" id="symbolcost">
+           &or;
+        </div>
+       </div>
+       <div class="ending1">
+       </div>
+       <div class="sidebarhead1" id="averagecost">   
+       <div class="detailcheck1">
+       <label class="text1"><input type="checkbox"> 300-500 for two </label> 
+       <br>
+       <label class="text1"><input type="checkbox"> 500-800 for two</label>
+       <br>
+       <label class="text1"><input type="checkbox"> 800-1500 for two</label>
+       <br>
+       </div>
+       </div>
+
+</div>
+<!-- <div class="container1" *ngFor="let res of rest">
+    {{ convert(x) }}
+    <img src="{{ value }}" alt="{{ key }}"/>
+    <div class="resname1">
+    <h1 class="subdiv1">{{ }}
+</div> -->
+
+<div class="container1" >
+<img src="/res1img1.jpg" alt="restaurant" />
+<div class="resname1">
+<h1 #resname3 class="subdiv1">WokonFire</h1>
+</div>
+<br>
+<div class="details1">
+Ratings
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star unchecked"></span>
+<span class="fa fa-star unchecked"></span>
+<br>
+Phone Number:1234567
+<br>
+Address:
+<br>
+Timings:
+<br>
+Average Cost For Two:
+<br>
+
+</div>
+<table class="table1">
+    <tr >
+        <td class="call1">
+            call
+        </td>
+        <td class="menu1" (click)="dispmenu(resname3.innerHTML)">
+            menu
+        </td>
+    </tr>
+</table>
+
+<!--<input type="button" class="menubutton" value="menu">-->
+    <!--<div class="menudisp">
+     menu
+    </div>-->
+</div>
+<!-- new div  -->
+<br>
+<br>
+<div class="container1">
+
+    <img src="/res2img1.jpg" alt="restaurant" />
+    <div class="resname1">
+    <h1 #resname1 class="subdiv1">Taj</h1>
+    </div>
+    <br>
+    <div class="details1">
+    Ratings
+        
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star unchecked"></span>
+    <br>
+    Phone Number:1234567
+    <br>
+    Address:
+    <br>
+    Timings:
+    <br>
+    Average Cost For Two:
+    <br>
+        </div>
+        <table class="table1">
+            <tr >
+                <td class="call1">
+                    call
+                </td>
+                <td class="menu1" (click)="dispmenu(resname1.innerHTML)">
+                    menu 
+                </td>
+            </tr>
+        </table>
+        
+        <!--<input type="button" class="menubutton" value="menu">-->
+            <!--<div class="menudisp">
+             menu
+            </div>-->
+        </div>
+        <!-- new div  -->
+<br>
+<br>
+<div class="container1">
+    <img src="/zesty.jpg" alt="restaurant" />
+    <div class="resname1">
+    <h1 #resname2 class="subdiv1" >Zesty</h1>
+    </div>
+    <br>
+    <div class="details1">
+    Ratings
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <br>
+    Phone Number:1234567
+    <br>
+    Address:
+    <br>
+    Timings:
+    <br>
+    Average Cost For Two:   
+    <br>
+    </div>
+    <table class="table1">
+    <tr >
+    <td class="call1">
+    call
+    </td>
+    <td class="menu1" (click)="dispmenu(resname2.innerHTML)">
+    menu
+    </td>
+    </tr>
+    </table>
+        
+        <!--<input type="button" class="menubutton" value="menu">-->
+            <!--<div class="menudisp">
+             menu
+            </div>-->
+        </div>
+</div>

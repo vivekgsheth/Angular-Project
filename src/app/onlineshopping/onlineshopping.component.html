@@ -1,0 +1,116 @@
+<app-navbar></app-navbar>
+<!-- <p *ngFor="let x of temp1">
+  {{ x.username }}
+
+</p> -->
+<br>
+<div class="mainsearch1" >
+<div class="searchplace1">
+<input #place type="text" id="placename" placeholder="enter placename" value="Nadiad">
+</div>
+<div class="checkinout1">
+  <input #indate type="date" class="checkin1" id="checkin1">  
+</div>
+<div class="checkinout2">
+    <input #outdate type="date" class="checkout1" id="checkout1">
+</div>
+<div class="personsadult1">
+<input #adult type="number" placeholder="Adults" id="adult1" min=0> 
+</div>
+<div class="personschild1">
+  <input #child type="number" placeholder="Children" id="child1" min=0> 
+</div>
+<div class="searchbar1">
+  <button class="searchbtn btn-primary" id="search" (click)="search(place.value,indate.value,outdate.value,adult.value,child.value)">Search</button>
+</div>
+</div>
+<br>
+<div class="maincontainer1">
+<div class="sidebar1">
+  <div class="headsymbol1">
+  <div class="heading1">
+  Budget
+  </div>
+  <div class="symbol1" id="symbolprice">
+    &or;
+  </div>
+</div>
+  <div class="ending1">
+  </div>
+  <div class="sidebarhead1" id="price">   
+  
+  <div class="detailcheck1">
+    <label class="text1" *ngFor="let x of detailcheckprice;let i=index"><input type="checkbox" (change)= "check('budget',x,showstar[i],showbudget[i])" > {{ x }} per night</label> 
+    <br>
+  </div>
+  </div>
+  <br> 
+  <div class="headsymbol1">
+  <div class="heading1">
+    Stars
+  </div>
+  <div class="symbol1" id="symbolbrand">
+      &or;
+  </div>
+</div>
+  <div class="ending1">
+  </div>
+
+  <div class="sidebarhead1" id="brand">  
+  <div class="detailcheck1" >
+   <label class="text1" *ngFor="let x of detailcheckstar;let i=index"><input type="checkbox" (change)="check('stars',x,showstar[i],showbudget[i])"> {{ x }} stars </label> 
+  <br>
+  </div>
+  </div>
+  <div class="headsymbol1">
+  
+  <div class="heading1">
+    Property Type 
+  </div>
+   <div class="symbol1" id="symbolscreen">
+      &or;
+    </div>
+    </div>
+   <div class="ending1">
+   </div>
+ 
+  <div class="sidebarhead1" id="screen">  
+  <div class="detailcheck1">
+   <label class="text1"><input type="checkbox"> Hotels</label> 
+    <br>
+    <label class="text1"><input type="checkbox"> Resorts</label>
+    <br>
+    <label class="text1"><input type="checkbox"> Villas</label>
+    <br>
+  </div>
+  </div>
+  <br>
+</div>
+<br>
+<div *ngFor="let x of temp1;let i=index ">
+<div class="container1" *ngIf=" showstar[i] || showinit[i] || showbudget[i]">
+  <div class="image1">  
+   <img src="{{ x.src }}" alt="{{ x.hname }} ">
+  </div>
+  <div class="details1">
+  <div class="header1">
+    <p style="font-size: 40px ;float:left" > {{ x.hname }} </p>
+    <p style="font-size:25px;float:right">{{ x.rating }} stars &nbsp;</p>
+  </div>
+  <br>
+  <div class="hotdet">
+    Address:{{ x.address }}
+    <br>
+     Available Rooms:{{ x.roomavail }}
+     <br>
+     Average Price Per Night: {{ x.price }}
+     <br>
+     Place: {{ x.place }}
+  </div>
+  </div>  
+</div> 
+<p *ngIf=" showstar[i] || showinit[i] || showbudget[i]">
+<br>
+<br>
+</p>
+</div>

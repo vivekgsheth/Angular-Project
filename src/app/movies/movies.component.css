@@ -1,0 +1,34 @@
+.card {
+   
+    
+    border-radius: 5px;
+    float:left;
+    margin-top:5%;
+    margin-left:5%;
+    position :relative; 
+    margin-bottom: 5%;
+}
+
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transform: scale(1.02);
+}
+
+
+
+img{
+    width:100%;
+    height: 50%;
+    object-fit:cover;
+    float:left;
+    display:block;
+    border-radius: 5px 5px 0 0;
+}
+
+
+
+
+
+
+
