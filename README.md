@@ -50,10 +50,10 @@ Without the service you would have to repeat your code in each component. Imagin
 
 ## Working
 
-User will register into the system and the signup is handled using the AuthService .
-The user can search for the funactionality and that too is handled by the AuthSErvice . 
-As this is a multipurpose website user can check restaurants, home services, movies, and online shoppping .
-We are storing the session of user using sessionStorage.
-Static data is used .
+User will register into the system and the signup is handled using the AuthService .<br/>
+The user can search for the funactionality and that too is handled by the AuthSErvice . <br/>
+As this is a multipurpose website user can check restaurants, home services, movies, and online shoppping .<br/>
+We are storing the session of user using sessionStorage.<br/>
+Database used is mongodb and fetched using MongoClient.
 
 
