@@ -25,3 +25,35 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Why do we need a service in Angular
+
+A service in Angular is generally used when you need to reuse data or logic across multiple components. Anytime you see logic or data-access duplicated across multiple components, think about refactoring that piece of logic or data-access code into a service. Using a service ensures we are not violating one of the Software principles - DRY ((Don't repeat yourself). The logic or data access is implemented once in a service, and the service can be used across all the components in our application. 
+
+Without the service you would have to repeat your code in each component. Imagine the overhead in terms of time and effort required to develop, debug, test and maintain the duplicated code across multiple places instead of having that duplicated code at one central place like a service and reusing that service where required.
+
+## What is an Observable 
+
+
+1. Observable is an asynchronous pattern. In the Observable pattern we have an Observable and an Observer. Observer observes the Observable. In many implementations an Observer is also called as a Subscriber.
+
+2. An Observable can have many Observers (also called Subscribers).
+
+3. Observable emits items or notifications over time to which an Observer (also called Subscriber) can subscribe.
+
+4. When a subscriber subscribes to an Observable, the subscriber also specifies a callback function.
+
+5. This subscriber callback function is notified as and when the Observable emits items or notifications.
+
+6. Within this callback function we write code to handle data itmes or notifications received from the Observable.
+
+
+## Working
+
+User will register into the system and the signup is handled using the AuthService .
+The user can search for the funactionality and that too is handled by the AuthSErvice . 
+As this is a multipurpose website user can check restaurants, home services, movies, and online shoppping .
+We are storing the session of user using sessionStorage.
+Static data is used .
+
+
