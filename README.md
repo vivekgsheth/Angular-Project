@@ -54,6 +54,6 @@ User will register into the system and the signup is handled using the AuthServi
 The user can search for the funactionality and that too is handled by the AuthSErvice . <br/>
 As this is a multipurpose website user can check restaurants, home services, movies, and online shoppping .<br/>
 We are storing the session of user using sessionStorage.<br/>
-Database used is mongodb and fetched using MongoClient.
+Database used is mongodb and fetched using MongoClient(Nodejs library that handles connecting to and interacting with a MongoDB database.).
 
 
